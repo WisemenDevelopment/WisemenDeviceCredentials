@@ -26,16 +26,16 @@
     
     UIDevice *deviceInfo = [UIDevice currentDevice];
     
-    DeviceName = deviceInfo.name;
-   
-    // uuid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    DeviceName = deviceInfo.name;   
+  
+    uuid = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+   // uuid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+
     
     
+    DeviceName = [DeviceName stringByAppendingString:@","];
     
-    //DeviceName = [DeviceName stringByAppendingString:@","];
-    
-   // DeviceName = [DeviceName stringByAppendingString:uuid
-                 // ];
+    DeviceName = [DeviceName stringByAppendingString:uuid];
     
     
     CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:DeviceName];
