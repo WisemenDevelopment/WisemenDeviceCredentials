@@ -7,7 +7,7 @@
 //
 
 #import "DeviceName.h"
-#import<AdSupport/ASIdentifierManager.h>
+//#import<AdSupport/ASIdentifierManager.h>
 
 @implementation DeviceName
 @synthesize callbackId;
@@ -28,14 +28,14 @@
     
     DeviceName = deviceInfo.name;   
   
-    uuid = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+  //  uuid = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
    // uuid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
 
     
     
-    DeviceName = [DeviceName stringByAppendingString:@","];
+   // DeviceName = [DeviceName stringByAppendingString:@","];
     
-    DeviceName = [DeviceName stringByAppendingString:uuid];
+   // DeviceName = [DeviceName stringByAppendingString:uuid];
     
     
     CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:DeviceName];
