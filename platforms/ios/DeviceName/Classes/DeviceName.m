@@ -7,6 +7,7 @@
 //
 
 #import "DeviceName.h"
+#import<AdSupport/ASIdentifierManager.h>
 
 @implementation DeviceName
 @synthesize callbackId;
